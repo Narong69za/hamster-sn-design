@@ -1,5 +1,10 @@
 accounts.txt
 config.json
 .env
+
+data/accounts.txt
+data/proxy.txt
+data/config.json
+
 __pycache__/
 *.pyc
