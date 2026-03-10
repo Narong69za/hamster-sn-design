@@ -1,42 +1,48 @@
-"""
-=====================================================
-MODULE  : banner.py
-VERSION : SN-HMSTR 1.1.5
-STATUS  : STABLE
-DESC    : CLI Banner Renderer
-=====================================================
-"""
+# =====================================================
+# PROJECT : SN DESIGN STUDIO
+# MODULE  : utils/banner.py
+# VERSION : SN-HMSTR 1.1.5
+# STATUS  : FIXED
+# =====================================================
+
+import os
+
+
+# ANSI COLOR
+RED = "\033[91m"
+CYAN = "\033[96m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RESET = "\033[0m"
+
 
 def show_banner():
 
-    PURPLE = "\033[95m"
-    CYAN = "\033[96m"
-    RESET = "\033[0m"
+    os.system("clear")
 
-    print()
-    print(PURPLE + " ███████╗███╗   ██╗")
-    print(" ██╔════╝████╗  ██║")
-    print(" ███████╗██╔██╗ ██║")
-    print(" ╚════██║██║╚██╗██║")
-    print(" ███████║██║ ╚████║")
-    print(" ╚══════╝╚═╝  ╚═══╝" + RESET)
-    print()
+    print(f"""{RED}
+ ███████╗███╗   ██╗
+ ██╔════╝████╗  ██║
+ ███████╗██╔██╗ ██║
+ ╚════██║██║╚██╗██║
+ ███████║██║ ╚████║
+ ╚══════╝╚═╝  ╚═══╝
+{RESET}
+{CYAN}SN DESIGN STUDIO{RESET}
+{GREEN}Automation Engine{RESET}        {YELLOW}Hamster Farming System{RESET}
 
-    print(CYAN + "SN DESIGN STUDIO" + RESET)
-    print("Automation Engine                         Hamster Farming System")
-    print()
-    print("Version   : SN-HMSTR 1.1")
-    print("Developer : SN DESIGN STUDIO")
-    print("Platform  : Termux / Linux")
-    print()
-    print("Mode      : Personal Farming")
-    print()
-    print("────────────────────────────────────────────")
-    print()
-    print("CONTACT")
-    print()
-    print("YouTube   : SN DESIGN STUDIO")
-    print("Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ")
-    print()
-    print("────────────────────────────────────────────")
-    print()
+Version   : SN-HMSTR 1.1.5
+Developer : SN DESIGN STUDIO
+Platform  : Termux / Linux
+
+Mode      : Personal Farming
+
+────────────────────────────────────────────
+
+CONTACT
+
+YouTube   : SN DESIGN STUDIO
+Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ
+
+────────────────────────────────────────────
+""")
