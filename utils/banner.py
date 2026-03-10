@@ -1,15 +1,14 @@
 # =====================================================
 # MODULE  : banner.py
-# VERSION : 1.1.5
+# VERSION : 1.1.6
 # STATUS  : STABLE
-# FIX     : Banner alignment (center terminal)
+# FIX     : Logo center / Info left / ANSI color fix
 # =====================================================
 
 import os
 import shutil
 
 
-# ANSI COLOR
 RED = "\033[91m"
 CYAN = "\033[96m"
 GREEN = "\033[92m"
@@ -27,17 +26,22 @@ def show_banner():
 
     width = shutil.get_terminal_size((80, 20)).columns
 
-    lines = [
-        f"{RED} ███████╗███╗   ██╗{RESET}",
-        f"{RED} ██╔════╝████╗  ██║{RESET}",
-        f"{RED} ███████╗██╔██╗ ██║{RESET}",
-        f"{RED} ╚════██║██║╚██╗██║{RESET}",
-        f"{RED} ███████║██║ ╚████║{RESET}",
-        f"{RED} ╚══════╝╚═╝  ╚═══╝{RESET}",
-        "",
+    logo = [
+        f"{RED}███████╗███╗   ██╗{RESET}",
+        f"{RED}██╔════╝████╗  ██║{RESET}",
+        f"{RED}███████╗██╔██╗ ██║{RESET}",
+        f"{RED}╚════██║██║╚██╗██║{RESET}",
+        f"{RED}███████║██║ ╚████║{RESET}",
+        f"{RED}╚══════╝╚═╝  ╚═══╝{RESET}",
+    ]
+
+    title = [
         f"{CYAN}SN DESIGN STUDIO{RESET}",
         f"{GREEN}Automation Engine{RESET}",
         f"{YELLOW}Hamster Farming System{RESET}",
+    ]
+
+    info = [
         "",
         "Version   : SN-HMSTR 1.1.5",
         "Developer : SN DESIGN STUDIO",
@@ -53,8 +57,20 @@ def show_banner():
         "Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ",
         "",
         "────────────────────────────────────────────",
-        ""
     ]
 
-    for line in lines:
+    # LOGO
+    for line in logo:
         print(center(line, width))
+
+    print()
+
+    # TITLE
+    for line in title:
+        print(center(line, width))
+
+    print()
+
+    # INFO
+    for line in info:
+        print(line)
