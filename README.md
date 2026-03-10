@@ -1,30 +1,65 @@
 # Hamster SN DESIGN
 
-Automation framework for Hamster ecosystem  
+Automation Engine for Hamster Tasks  
 Developed by SN DESIGN STUDIO
+## Overview
 
----
+Hamster SN DESIGN is a lightweight automation engine designed to manage
+multiple accounts and automate tasks efficiently.
 
-## English
+The system is built with Python and optimized to run inside Termux
+environments for mobile-based automation.
+## Features
 
-Hamster SN DESIGN is an automation system designed to run
-multiple accounts in a lightweight Termux environment.
+- Multi Account Automation
+- Auto Tasks
+- Auto Promo
+- Tap System
+- Account Manager
+- Modular Python Architecture
+- Termux Compatible
 
-Main features
+  ## Installation
 
-- Multi account automation
-- Modular Python architecture
-- Termux compatible
+Clone repository
 
----
+git clone https://github.com/YOUR_USERNAME/hamster-sn-design.git
 
-## ภาษาไทย
+Enter project folder
+
+cd hamster-sn-design
+
+Install dependencies
+
+pip install -r requirements.txt
+## Run
+
+python main.py
+## Project Structure
+
+hamster-sn-design
+│
+├── core/
+├── modules/
+├── utils/
+├── data/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── LICENSE
+# ภาษาไทย
+
+## เกี่ยวกับระบบ
 
 Hamster SN DESIGN เป็นระบบ Automation สำหรับจัดการหลายบัญชี
-ออกแบบมาให้ทำงานบน Termux และ Python
+และทำงานอัตโนมัติผ่านโครงสร้าง Python แบบโมดูล
 
-คุณสมบัติหลัก
+ออกแบบมาให้ทำงานบน Termux และมือถือได้
+
+## ความสามารถ
 
 - รองรับหลายบัญชี
-- โครงสร้างโมดูล
-- ทำงานบนมือถือได้
+- ระบบทำงานอัตโนมัติ
+- ระบบ Tap
+- ระบบ Promo
