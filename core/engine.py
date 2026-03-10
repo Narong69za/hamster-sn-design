@@ -29,6 +29,7 @@ def start_engine():
     log("Initializing Hamster Bot Engine...")
 
     accounts = load_accounts()
+    log(f"Loaded {len(accounts)} accounts")
 
     if not accounts:
         log("No accounts loaded")
