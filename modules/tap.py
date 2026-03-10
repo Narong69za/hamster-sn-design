@@ -1,10 +1,20 @@
-from utils.logger import log
-from utils.delay import random_delay
+"""
+=====================================================
+MODULE  : tap.py
+VERSION : SN-HMSTR 1.1
+STATUS  : STABLE
+DESC    : Tap farming module
+=====================================================
+"""
+
+import time
+
 
 def run_tap(account):
+    """
+    Execute tap farming logic
+    """
 
-    username = account["user"].get("username","unknown")
-
-    log(f"[{username}] Tap farming started")
-
-    random_delay()
+    # Placeholder logic
+    # Real tap request will be implemented later
+    time.sleep(2)

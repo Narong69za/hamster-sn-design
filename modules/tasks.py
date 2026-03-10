@@ -1,7 +1,19 @@
-from utils.logger import log
+"""
+=====================================================
+MODULE  : tasks.py
+VERSION : SN-HMSTR 1.1
+STATUS  : STABLE
+DESC    : Task processing module
+=====================================================
+"""
+
+import time
+
 
 def run_tasks(account):
+    """
+    Execute task checking logic
+    """
 
-    username = account["user"].get("username","unknown")
-
-    log(f"[{username}] Checking tasks")
+    # Placeholder for future task API logic
+    time.sleep(1)
