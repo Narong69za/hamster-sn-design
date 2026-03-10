@@ -1,21 +1,34 @@
 import time
+
+from core.account_loader import load_accounts
 from modules.tap import run_tap
 from modules.tasks import run_tasks
 from modules.promo import run_promo
+
 from utils.logger import log
 
+
 def start_engine():
-    log("Engine started")
+
+    accounts = load_accounts()
+
+    if not accounts:
+        log("No accounts loaded")
+        return
+
+    log(f"Starting engine with {len(accounts)} accounts")
 
     while True:
-        log("Running Tap Module")
-        run_tap()
 
-        log("Running Task Module")
-        run_tasks()
+        for account in accounts:
 
-        log("Running Promo Module")
-        run_promo()
+            username = account["user"].get("username","unknown")
 
-        log("Sleeping 10 minutes...")
+            log(f"Running account: {username}")
+
+            run_tap(account)
+            run_tasks(account)
+            run_promo(account)
+
+        log("Cycle finished - sleep 600s")
         time.sleep(600)
