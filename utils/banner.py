@@ -1,42 +1,42 @@
 """
 =====================================================
-PROJECT : SN DESIGN STUDIO
-MODULE  : utils/banner.py
-VERSION : 1.1
-STATUS  : ACTIVE
-DESC    : CLI Banner / Identity Header
-LAST FIX: Added contact + version sync
+MODULE  : banner.py
+VERSION : SN-HMSTR 1.1.6
+STATUS  : STABLE
+DESC    : CLI Banner Renderer
 =====================================================
 """
 
 def show_banner():
 
-    banner = r"""
-\033[95m
- ███████╗███╗   ██╗
- ██╔════╝████╗  ██║
- ███████╗██╔██╗ ██║
- ╚════██║██║╚██╗██║
- ███████║██║ ╚████║
- ╚══════╝╚═╝  ╚═══╝
-\033[0m
+    PURPLE = "\033[95m"
+    CYAN = "\033[96m"
+    RESET = "\033[0m"
 
-\033[96mSN DESIGN STUDIO\033[0m
-Automation Engine                         Hamster Farming System
+    print()
+    print(PURPLE + " ███████╗███╗   ██╗")
+    print(" ██╔════╝████╗  ██║")
+    print(" ███████╗██╔██╗ ██║")
+    print(" ╚════██║██║╚██╗██║")
+    print(" ███████║██║ ╚████║")
+    print(" ╚══════╝╚═╝  ╚═══╝" + RESET)
+    print()
 
-Version   : SN-HMSTR 1.1
-Developer : SN DESIGN STUDIO
-Platform  : Termux / Linux
-
-Mode      : Personal Farming
-
-────────────────────────────────────────────
-
-CONTACT
-
-YouTube   : SN DESIGN STUDIO
-Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ
-
-────────────────────────────────────────────
-"""
-    print(banner)
+    print(CYAN + "SN DESIGN STUDIO" + RESET)
+    print("Automation Engine                         Hamster Farming System")
+    print()
+    print("Version   : SN-HMSTR 1.1")
+    print("Developer : SN DESIGN STUDIO")
+    print("Platform  : Termux / Linux")
+    print()
+    print("Mode      : Personal Farming")
+    print()
+    print("────────────────────────────────────────────")
+    print()
+    print("CONTACT")
+    print()
+    print("YouTube   : SN DESIGN STUDIO")
+    print("Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ")
+    print()
+    print("────────────────────────────────────────────")
+    print()

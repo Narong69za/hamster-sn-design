@@ -1,7 +1,7 @@
 """
 =====================================================
 MODULE  : tasks.py
-VERSION : SN-HMSTR 1.1
+VERSION : SN-HMSTR 1.1.5
 STATUS  : STABLE
 DESC    : Task processing module
 =====================================================

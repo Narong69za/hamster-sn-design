@@ -1,7 +1,7 @@
 """
 =====================================================
 MODULE  : reward_checker.py
-VERSION : SN-HMSTR 1.1.2
+VERSION : SN-HMSTR 1.1.5
 STATUS  : STABLE
 DESC    : Reward status checker
 =====================================================

@@ -2,7 +2,7 @@
 =====================================================
 PROJECT : SN DESIGN STUDIO
 MODULE  : core/engine.py
-VERSION : 1.1
+VERSION : 1.1.5
 STATUS  : ACTIVE
 DESC    : Hamster Farming Automation Engine
 LAST FIX: Integrated reward + player state
