@@ -8,3 +8,10 @@ data/config.json
 
 __pycache__/
 *.pyc
+
+# runtime
+accounts/
+logs/
+*.log
+*.token
+*.session
