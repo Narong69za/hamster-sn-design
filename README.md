@@ -23,7 +23,7 @@ environments for mobile-based automation.
 
 Clone repository
 
-git clone https://github.com/YOUR_USERNAME/hamster-sn-design.git
+git clone https://github.com/Narong69za/hamster-sn-design.git
 
 Enter project folder
 
