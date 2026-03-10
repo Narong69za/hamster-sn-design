@@ -10,7 +10,6 @@ DESC    : Load hamster accounts
 import urllib.parse
 import json
 
-
 ACCOUNTS_FILE = "data/accounts.txt"
 
 
@@ -47,8 +46,19 @@ def load_accounts():
 
         with open(ACCOUNTS_FILE, "r", encoding="utf-8") as f:
 
-            for line in f:
+            lines = f.readlines()
+
+            for line in lines:
 
                 line = line.strip()
 
                 if not line:
+                    continue
+
+                accounts.append(parse_account(line))
+
+    except FileNotFoundError:
+        print("[ACCOUNT] accounts.txt not found")
+
+    return accounts
+
