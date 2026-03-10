@@ -1,11 +1,12 @@
 # =====================================================
-# PROJECT : SN DESIGN STUDIO
-# MODULE  : utils/banner.py
-# VERSION : SN-HMSTR 1.1.5
-# STATUS  : FIXED
+# MODULE  : banner.py
+# VERSION : 1.1.5
+# STATUS  : STABLE
+# FIX     : Banner alignment (center terminal)
 # =====================================================
 
 import os
+import shutil
 
 
 # ANSI COLOR
@@ -16,33 +17,44 @@ YELLOW = "\033[93m"
 RESET = "\033[0m"
 
 
+def center(text, width):
+    return text.center(width)
+
+
 def show_banner():
 
     os.system("clear")
 
-    print(f"""{RED}
- ███████╗███╗   ██╗
- ██╔════╝████╗  ██║
- ███████╗██╔██╗ ██║
- ╚════██║██║╚██╗██║
- ███████║██║ ╚████║
- ╚══════╝╚═╝  ╚═══╝
-{RESET}
-{CYAN}SN DESIGN STUDIO{RESET}
-{GREEN}Automation Engine{RESET}        {YELLOW}Hamster Farming System{RESET}
+    width = shutil.get_terminal_size((80, 20)).columns
 
-Version   : SN-HMSTR 1.1.5
-Developer : SN DESIGN STUDIO
-Platform  : Termux / Linux
+    lines = [
+        f"{RED} ███████╗███╗   ██╗{RESET}",
+        f"{RED} ██╔════╝████╗  ██║{RESET}",
+        f"{RED} ███████╗██╔██╗ ██║{RESET}",
+        f"{RED} ╚════██║██║╚██╗██║{RESET}",
+        f"{RED} ███████║██║ ╚████║{RESET}",
+        f"{RED} ╚══════╝╚═╝  ╚═══╝{RESET}",
+        "",
+        f"{CYAN}SN DESIGN STUDIO{RESET}",
+        f"{GREEN}Automation Engine{RESET}",
+        f"{YELLOW}Hamster Farming System{RESET}",
+        "",
+        "Version   : SN-HMSTR 1.1.5",
+        "Developer : SN DESIGN STUDIO",
+        "Platform  : Termux / Linux",
+        "",
+        "Mode      : Personal Farming",
+        "",
+        "────────────────────────────────────────────",
+        "",
+        "CONTACT",
+        "",
+        "YouTube   : SN DESIGN STUDIO",
+        "Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ",
+        "",
+        "────────────────────────────────────────────",
+        ""
+    ]
 
-Mode      : Personal Farming
-
-────────────────────────────────────────────
-
-CONTACT
-
-YouTube   : SN DESIGN STUDIO
-Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ
-
-────────────────────────────────────────────
-""")
+    for line in lines:
+        print(center(line, width))
