@@ -1,27 +1,53 @@
-# Hamster SN DESIGN
+# Hamster SN Design
 
-Automation Engine for Hamster Tasks  
+Automation Engine for Hamster Tasks
+
 Developed by SN DESIGN STUDIO
-## Overview
 
-Hamster SN DESIGN is a lightweight automation engine designed to manage
-multiple accounts and automate tasks efficiently.
+---
 
-The system is built with Python and optimized to run inside Termux
-environments for mobile-based automation.
-## Features
+# Overview
 
-- Multi Account Automation
+Hamster SN Design is an automation engine designed to automate tasks inside the Hamster ecosystem.
+
+This tool provides automated systems for:
+
 - Auto Tasks
 - Auto Promo
-- Tap System
-- Account Manager
-- Modular Python Architecture
-- Termux Compatible
+- Tap Automation
+- Account Management
 
-  ## Installation
+---
 
-Clone repository
+# Requirements
+
+- Termux
+- Python 3.10+
+- Internet Connection
+
+---
+
+# Step 1 — Update Termux
+
+Open Termux and run:
+
+pkg update && pkg upgrade -y
+
+---
+
+# Step 2 — Install Required Packages
+
+pkg install git -y
+pkg install python -y
+
+Check installation
+
+python --version
+git --version
+
+---
+
+# Step 3 — Clone Repository
 
 git clone https://github.com/Narong69za/hamster-sn-design.git
 
@@ -29,37 +55,53 @@ Enter project folder
 
 cd hamster-sn-design
 
-Install dependencies
+---
+
+# Step 4 — Install Python Dependencies
 
 pip install -r requirements.txt
-## Run
+
+---
+
+# Step 5 — Run Program
 
 python main.py
-## Project Structure
 
-hamster-sn-design
-│
-├── core/
-├── modules/
-├── utils/
-├── data/
-│
-├── main.py
-├── requirements.txt
-├── README.md
-└── LICENSE
-# ภาษาไทย
+---
 
-## เกี่ยวกับระบบ
+# Project Structure
 
-Hamster SN DESIGN เป็นระบบ Automation สำหรับจัดการหลายบัญชี
-และทำงานอัตโนมัติผ่านโครงสร้าง Python แบบโมดูล
+hamster-sn-design/
 
-ออกแบบมาให้ทำงานบน Termux และมือถือได้
+core/
+modules/
+utils/
+data/
+main.py
+requirements.txt
 
-## ความสามารถ
+---
 
-- รองรับหลายบัญชี
-- ระบบทำงานอัตโนมัติ
-- ระบบ Tap
-- ระบบ Promo
+# Features
+
+Auto Task Engine  
+Auto Promo System  
+Tap Automation  
+Multi Account Manager
+
+---
+
+# Author
+
+SN DESIGN STUDIO
+
+GitHub:
+https://github.com/Narong69za
+
+---
+
+# License
+
+MIT License
+
+Copyright (c) 2026 SN DESIGN STUDIO
