@@ -1,1 +1,0 @@
-# ใส่ telegram query_id ของแต่ละ account (1 บรรทัดต่อ 1 account)

@@ -1,8 +1,0 @@
-{
-  "auto_tap": true,
-  "auto_tasks": true,
-  "auto_promo": true,
-  "delay_min": 2,
-  "delay_max": 5,
-  "loop_sleep": 600
-}
