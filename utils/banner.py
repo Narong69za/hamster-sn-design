@@ -1,7 +1,7 @@
 """
 =====================================================
 MODULE  : banner.py
-VERSION : SN-HMSTR 1.1.6
+VERSION : SN-HMSTR 1.1.5
 STATUS  : STABLE
 DESC    : CLI Banner Renderer
 =====================================================
