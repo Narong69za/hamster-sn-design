@@ -2,7 +2,7 @@
 =====================================================
 PROJECT : SN DESIGN STUDIO
 MODULE  : main.py
-VERSION : 1.1.5
+VERSION : 1.1.2
 STATUS  : ACTIVE
 DESC    : Application Entry Point
 LAST FIX: Banner + Version update
