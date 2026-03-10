@@ -1,21 +1,42 @@
-from colorama import Fore, Style
-import os
+"""
+=====================================================
+PROJECT : SN DESIGN STUDIO
+MODULE  : utils/banner.py
+VERSION : 1.1
+STATUS  : ACTIVE
+DESC    : CLI Banner / Identity Header
+LAST FIX: Added contact + version sync
+=====================================================
+"""
 
 def show_banner():
-    os.system("clear")
-    print(Fore.RED + r"""
+
+    banner = r"""
+\033[95m
  ███████╗███╗   ██╗
  ██╔════╝████╗  ██║
  ███████╗██╔██╗ ██║
  ╚════██║██║╚██╗██║
  ███████║██║ ╚████║
  ╚══════╝╚═╝  ╚═══╝
-""")
-    print(Fore.WHITE + "SN DESIGN STUDIO")
-    print(Fore.WHITE + "Automation Engine")
-    print(Fore.WHITE + "Hamster Farming System")
-    print(Fore.WHITE + "Version : SN-HMSTR 1.0\n")
-    print(Fore.YELLOW + "Developer : SN DESIGN STUDIO")
-    print(Fore.YELLOW + "Platform  : Termux / Linux")
-    print(Fore.YELLOW + "Mode      : Personal Farming\n")
-    print(Style.RESET_ALL)
+\033[0m
+
+\033[96mSN DESIGN STUDIO\033[0m
+Automation Engine                         Hamster Farming System
+
+Version   : SN-HMSTR 1.1
+Developer : SN DESIGN STUDIO
+Platform  : Termux / Linux
+
+Mode      : Personal Farming
+
+────────────────────────────────────────────
+
+CONTACT
+
+YouTube   : SN DESIGN STUDIO
+Facebook  : ต้องดีแค่ไหน โลกถึงจะจำ
+
+────────────────────────────────────────────
+"""
+    print(banner)
