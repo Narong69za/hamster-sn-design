@@ -1,0 +1,8 @@
+{
+  "delay_min": 3,
+  "delay_max": 10,
+  "auto_tap": true,
+  "auto_tasks": true,
+  "auto_promo": true,
+  "token_refresh_hours": 24
+}

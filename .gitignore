@@ -1,17 +1,71 @@
-accounts.txt
-config.json
+# =========================
+# ENV
+# =========================
 .env
+.env.*
+venv/
+env/
+.venv/
 
-data/accounts.txt
-data/proxy.txt
-data/config.json
-
+# =========================
+# Python Cache
+# =========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+*.so
 
-# runtime
-accounts/
+# =========================
+# Logs
+# =========================
 logs/
 *.log
-*.token
+
+# =========================
+# Runtime
+# =========================
+accounts/
 *.session
+*.token
+*.sqlite
+*.db
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editors
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Build / Packaging
+# =========================
+dist/
+build/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# =========================
+# Test / Coverage
+# =========================
+.coverage
+htmlcov/
+.pytest_cache/
+
+# =========================
+# IMPORTANT
+# keep data structure
+# =========================
+!data/accounts.txt
+!data/proxy.txt
+!data/config.json
