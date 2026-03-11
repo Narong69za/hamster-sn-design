@@ -7,14 +7,24 @@ DESC    : Tap farming module
 =====================================================
 """
 
-import time
+from core.api import HamsterAPI
 
 
-def run_tap(account, api):
+class TapModule:
 
-    tap_result = api.tap(10)
+    def __init__(self, api: HamsterAPI):
+        self.api = api
 
-    if tap_result:
-        print("[TAP] coins:", tap_result.get("coins", 0))
+    def run(self):
 
-    time.sleep(2)
+        print("Running TAP")
+
+        data = self.api.sync()
+
+        if not data:
+            print("sync failed")
+            return
+
+        print("tap sync ok")
+
+        self.api.random_sleep()
