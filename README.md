@@ -121,7 +121,7 @@ Video Tutorial
 You can watch the full setup tutorial here:
 
 YouTube:
-https://youtube.com/your-video-link
+[https://youtube.com/your-video-link](https://youtube.com/@sndesignstudio-design?si=eEtj_sDPf_AK0Psw)
 
 The tutorial explains:
 
@@ -136,7 +136,13 @@ Author
 
 SN DESIGN STUDIO
 
-GitHub:
+Official Website
+https://sn-designstudio.dev
+
+YouTube Channel
+https://youtube.com/@sndesignstudio-design?si=TfOlDwUi1zI7QxRH
+
+GitHub
 https://github.com/Narong69za
 
 ---
@@ -244,7 +250,7 @@ python main.py
 
 YouTube
 
-[https://youtube.com/your-video-link](https://youtube.com/@sndesignstudio-design?si=TfOlDwUi1zI7QxRH)
+[[https://youtube.com/your-video-link](https://youtube.com/@sndesignstudio-design?si=TfOlDwUi1zI7QxRH)](https://youtube.com/@sndesignstudio-design?si=eEtj_sDPf_AK0Psw)
 
 ภายในวิดีโอจะสอน
 
