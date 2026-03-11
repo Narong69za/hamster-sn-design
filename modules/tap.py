@@ -1,7 +1,7 @@
 """
 =====================================================
 MODULE  : tap.py
-VERSION : SN-HMSTR 1.1.5
+VERSION : SN-HMSTR 1.1.7
 STATUS  : STABLE
 DESC    : Tap farming module
 =====================================================
@@ -10,11 +10,11 @@ DESC    : Tap farming module
 import time
 
 
-def run_tap(account):
-    """
-    Execute tap farming logic
-    """
+def run_tap(account, api):
 
-    # Placeholder logic
-    # Real tap request will be implemented later
+    tap_result = api.tap(10)
+
+    if tap_result:
+        print("[TAP] coins:", tap_result.get("coins", 0))
+
     time.sleep(2)
