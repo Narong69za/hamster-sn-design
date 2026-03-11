@@ -244,7 +244,7 @@ python main.py
 
 YouTube
 
-https://youtube.com/your-video-link
+[https://youtube.com/your-video-link](https://youtube.com/@sndesignstudio-design?si=TfOlDwUi1zI7QxRH)
 
 ภายในวิดีโอจะสอน
 
@@ -258,6 +258,12 @@ https://youtube.com/your-video-link
 ผู้พัฒนา
 
 SN DESIGN STUDIO
+
+Official Website
+https://sn-designstudio.dev
+
+YouTube Channel
+https://youtube.com/@sndesignstudio-design?si=TfOlDwUi1zI7QxRH
 
 GitHub
 https://github.com/Narong69za
