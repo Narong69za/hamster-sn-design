@@ -1,57 +1,48 @@
 import requests
-import json
-
-BASE_URL = "https://api.hamsterkombat.io"
+import time
+import random
 
 
 class HamsterAPI:
 
-    def __init__(self, token):
-
+    def __init__(self, token, user_agent):
+        self.base_url = "https://api.g.hamsterverse.io"
         self.token = token
 
         self.headers = {
             "Authorization": f"Bearer {token}",
+            "User-Agent": user_agent,
+            "Accept": "application/json",
             "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0"
+            "Origin": "https://app-nginx.g.hamsterverse.io",
+            "Referer": "https://app-nginx.g.hamsterverse.io/"
         }
 
-    def request(self, method, endpoint, payload=None):
+    def post(self, endpoint, payload=None):
 
-        url = f"{BASE_URL}{endpoint}"
+        url = f"{self.base_url}{endpoint}"
 
-        if method == "GET":
-            r = requests.get(url, headers=self.headers)
+        try:
+            r = requests.post(
+                url,
+                json=payload,
+                headers=self.headers,
+                timeout=30
+            )
 
-        else:
-            r = requests.post(url, json=payload, headers=self.headers)
+            if r.status_code == 200:
+                return r.json()
 
-        if r.status_code == 200:
-            return r.json()
+            print("API ERROR:", r.status_code)
+            return None
 
-        return None
+        except Exception as e:
+            print("REQUEST ERROR:", e)
+            return None
 
     def sync(self):
-        return self.request("POST", "/player/sync")
 
-    def tap(self, count=10):
+        return self.post("/verse/sync")
 
-        payload = {
-            "count": count
-        }
-
-        return self.request("POST", "/click", payload)
-
-    def tasks(self):
-        return self.request("GET", "/tasks")
-
-    def check_task(self, task_id):
-
-        payload = {
-            "task_id": task_id
-        }
-
-        return self.request("POST", "/tasks/check", payload)
-
-    def promo(self):
-        return self.request("GET", "/promo")
+    def random_sleep(self, a=5, b=15):
+        time.sleep(random.randint(a, b))
