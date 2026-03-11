@@ -7,20 +7,21 @@ DESC    : Task processing module
 =====================================================
 """
 
-import time
+class TaskModule:
 
+    def __init__(self, api):
+        self.api = api
 
-def run_tasks(account, api):
+    def run(self):
 
-    tasks = api.tasks()
+        print("Running Tasks")
 
-    if not tasks:
-        return
+        data = self.api.sync()
 
-    for task in tasks:
+        if not data:
+            print("task sync failed")
+            return
 
-        task_id = task.get("id")
+        print("tasks checked")
 
-        api.check_task(task_id)
-
-    time.sleep(1)
+        self.api.random_sleep()
