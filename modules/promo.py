@@ -7,14 +7,21 @@ DESC    : Promo reward module
 =====================================================
 """
 
-import time
+class PromoModule:
 
+    def __init__(self, api):
+        self.api = api
 
-def run_promo(account, api):
+    def run(self):
 
-    promos = api.promo()
+        print("Checking Promo")
 
-    if promos:
-        print("[PROMO] rewards found")
+        data = self.api.sync()
 
-    time.sleep(1)
+        if not data:
+            print("promo sync failed")
+            return
+
+        print("promo checked")
+
+        self.api.random_sleep()
