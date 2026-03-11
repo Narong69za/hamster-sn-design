@@ -7,21 +7,10 @@ DESC    : Promo reward module
 =====================================================
 """
 
-class PromoModule:
+from utils.logger import log
 
-    def __init__(self, api):
-        self.api = api
+def run_promo(account):
 
-    def run(self):
+    name = account.get("name")
 
-        print("Checking Promo")
-
-        data = self.api.sync()
-
-        if not data:
-            print("promo sync failed")
-            return
-
-        print("promo checked")
-
-        self.api.random_sleep()
+    log(f"[{name}] promo module running")

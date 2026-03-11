@@ -7,21 +7,10 @@ DESC    : Task processing module
 =====================================================
 """
 
-class TaskModule:
+from utils.logger import log
 
-    def __init__(self, api):
-        self.api = api
+def run_tasks(account):
 
-    def run(self):
+    name = account.get("name")
 
-        print("Running Tasks")
-
-        data = self.api.sync()
-
-        if not data:
-            print("task sync failed")
-            return
-
-        print("tasks checked")
-
-        self.api.random_sleep()
+    log(f"[{name}] tasks module running")
