@@ -1,27 +1,46 @@
+# =====================================================
+# MODULE : modules/profile.py
+# FIXED  : API response + JSON parsing
+# =====================================================
+
 import requests
 from utils.logger import log
 
 API_PROFILE = "https://api.hamsterkombatgame.io/auth/profile"
 
+
 def get_profile(account):
 
-    name = account.get("name")
+    name = account.get("name", "unknown")
     token = account.get("token")
 
     headers = {
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
     }
 
     try:
 
-        r = requests.post(API_PROFILE, headers=headers)
+        r = requests.get(API_PROFILE, headers=headers, timeout=15)
+
+        if r.status_code != 200:
+            log(f"[{name}] PROFILE HTTP ERROR : {r.status_code}")
+            return
+
+        if not r.text.strip():
+            log(f"[{name}] PROFILE EMPTY RESPONSE")
+            return
+
         data = r.json()
 
-        coins = data.get("coins", 0)
-        diamonds = data.get("diamonds", 0)
-        energy = data.get("energy", 0)
-        level = data.get("level", 0)
+        # hamster API structure
+        user = data.get("clickerUser", data)
+
+        coins = user.get("balanceCoins", 0)
+        diamonds = user.get("balanceDiamonds", 0)
+        energy = user.get("availableTaps", 0)
+        level = user.get("level", 0)
 
         log(f"[{name}] PROFILE")
         log(f"[{name}] COINS   : {coins}")
@@ -31,4 +50,4 @@ def get_profile(account):
 
     except Exception as e:
 
-        log(f"[{name}] PROFILE ERROR : {e}")
+        log(f"[{name}] PROFILE ERROR : {str(e)}")
