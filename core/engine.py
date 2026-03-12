@@ -1,9 +1,8 @@
 # =====================================================
 # PROJECT : SN DESIGN STUDIO
 # MODULE  : core/engine.py
-# VERSION : SN-HMSTR 1.1.7
-# STATUS  : FIXED
-# LAST FIX: account argument for modules
+# VERSION : SN-HMSTR 1.2.0
+# STATUS  : STABLE
 # =====================================================
 
 import time
@@ -11,6 +10,7 @@ import time
 from modules.tap import run_tap
 from modules.tasks import run_tasks
 from modules.promo import run_promo
+from modules.profile import get_profile
 
 from utils.accounts import load_accounts
 from utils.logger import log
@@ -36,26 +36,34 @@ def start_engine():
 
     while True:
 
+        log("====================================")
         log(f"Starting engine with {len(accounts)} accounts")
+        log("====================================")
 
         for account in accounts:
 
             name = account.get("name", "unknown")
 
-            log(f"Running account: {name}")
+            log("")
+            log(f"[ACCOUNT] {name}")
+            log("------------------------------------")
 
             try:
 
+                # PROFILE STATUS
+                get_profile(account)
+
+                # MODULES
                 run_tap(account)
-
                 run_tasks(account)
-
                 run_promo(account)
 
             except Exception as e:
 
-                log(f"[{name}] error: {e}")
+                log(f"[{name}] ERROR : {e}")
 
+        log("")
         log("Cycle finished - sleep 600s")
+        log("")
 
         time.sleep(600)
