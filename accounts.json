@@ -1,6 +1,6 @@
 [
-  {
-    "name": "account1",
-    "token": "session_here"
-  }
+ {
+  "name": "account1",
+  "token": "PUT_YOUR_REAL_TOKEN_HERE"
+ }
 ]
