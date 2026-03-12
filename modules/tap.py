@@ -7,12 +7,20 @@ DESC    : Tap farming module
 =====================================================
 """
 
-import requests
 from utils.logger import log
 
 def run_tap(account):
 
-    name = account.get("name")
-    token = account.get("token")
+    name = account.get("name", "unknown")
 
-    log(f"[{name}] tap module running")
+    log(f"[{name}] TAP : START")
+
+    try:
+
+        status = "OK"
+
+        log(f"[{name}] TAP : {status}")
+
+    except Exception as e:
+
+        log(f"[{name}] TAP : ERROR {e}")
