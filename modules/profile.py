@@ -6,7 +6,7 @@
 import requests
 from utils.logger import log
 
-API_PROFILE = "https://api.hamsterkombatgame.io/auth/profile"
+API_URL = "https://api.hamsterkombatgame.io/clicker/sync"
 
 
 def get_profile(account):
@@ -16,26 +16,21 @@ def get_profile(account):
 
     headers = {
         "Authorization": f"Bearer {token}",
-        "Accept": "application/json",
+        "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0"
     }
 
     try:
 
-        r = requests.get(API_PROFILE, headers=headers, timeout=15)
+        r = requests.post(API_URL, headers=headers, json={}, timeout=15)
 
         if r.status_code != 200:
             log(f"[{name}] PROFILE HTTP ERROR : {r.status_code}")
             return
 
-        if not r.text.strip():
-            log(f"[{name}] PROFILE EMPTY RESPONSE")
-            return
-
         data = r.json()
 
-        # hamster API structure
-        user = data.get("clickerUser", data)
+        user = data.get("clickerUser", {})
 
         coins = user.get("balanceCoins", 0)
         diamonds = user.get("balanceDiamonds", 0)
