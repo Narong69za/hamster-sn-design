@@ -8,14 +8,13 @@ from utils.logger import log
 
 API_URL = "https://api.hamsterkombatgame.io/season2/sync"
 
-
 def get_profile(account):
 
     name = account["name"]
     token = account["token"]
 
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"tma {token}",
         "Content-Type": "application/json",
         "Origin": "https://season2.hamsterkombatgame.io",
         "Referer": "https://season2.hamsterkombatgame.io/",
