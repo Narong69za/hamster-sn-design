@@ -1,6 +1,7 @@
 [
- {
-  "name": "account1",
-  "token": "PUT_YOUR_REAL_TOKEN_HERE"
- }
+  {
+    "name": "account1",
+    "user_id": "6792259190",
+    "token": "34526379449843"
+  }
 ]

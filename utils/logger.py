@@ -1,15 +1,66 @@
-# =====================================================
-# PROJECT : SN DESIGN STUDIO
-# MODULE  : utils/logger.py
-# VERSION : SN-HMSTR 1.1.5
-# STATUS  : STABLE
-# LAST FIX: Clean logging output
-# =====================================================
+"""
+=====================================================
+PROJECT : SN DESIGN HAMSTER BOT
+MODULE  : utils/logger.py
+VERSION : 1.0.0
+STATUS  : PRODUCTION
+LAST FIX: Logger
+=====================================================
+"""
 
-from colorama import Fore, Style, init
+import logging
 
-init(autoreset=True)
+logging.basicConfig(
+    filename="logs/bot.log",
+    level=logging.INFO
+)
+
+logger = logging.getLogger()
 
 
-def log(message):
-    print(f"{Fore.GREEN}[SN ENGINE]{Style.RESET_ALL} {message}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

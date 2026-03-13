@@ -1,8 +1,11 @@
 {
-  "delay_min": 3,
-  "delay_max": 10,
-  "auto_tap": true,
-  "auto_tasks": true,
-  "auto_promo": true,
-  "token_refresh_hours": 24
+  "api_base": "https://api.g.hamsterverse.io",
+  "accounts": [
+    {
+      "name": "main",
+      "tgWebAppData": "1759971866899HRLVXrDxeOrMoJMDXiXeibwKSBDBRsjPNf45DGbbBv7PxrboGx3EspASpwkPEBPj6792259190",
+      "api_key": "7f65082a-f00f-4cef-9532-41877fa568cbaa",
+      "profile_id": "41d12ff2-f754-455f-b8df-430836eba3bc"
+    }
+  ]
 }

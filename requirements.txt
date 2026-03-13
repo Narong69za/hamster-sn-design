@@ -1,2 +1,7 @@
 requests
+httpx
+aiohttp
 colorama
+rich
+fake-useragent
+python-dotenv
