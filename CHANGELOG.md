@@ -1,6 +1,6 @@
 # SN-HMSTR CHANGELOG
 
-## v1.1.9 - Engine API Integration
+## v1.0 – Official Stable Release
 
 ### Added
 - Real Hamster API client
@@ -14,12 +14,8 @@
 
 ### Fixed
 - Tap farming loop previously simulated
-
-## v1.1.7
-Fix:
 - run_tap() missing account argument
-- engine now passes account object to modules
-- stabilize multi-account execution
+- Stabilized multi-account execution
 
-Updated Files:
+### Updated Files
 - core/engine.py
